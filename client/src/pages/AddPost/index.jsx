@@ -37,7 +37,7 @@ export const AddPost = () => {
       setImageUrl(data.url);
     } catch (error) {
       console.warn(error);
-      alert("Error uploading imege");
+      alert("Error uploading image");
     }
   };
 
@@ -62,12 +62,10 @@ export const AddPost = () => {
 
       if (isEditing) {
         const { data } = await axios.patch(`/posts/${id}`, fields);
-        
 
         navigate(`/posts/${id}`);
       } else {
         const { data } = await axios.post("/posts", fields);
-        
 
         navigate(`/posts/${data._id}`);
       }
@@ -174,7 +172,7 @@ export const AddPost = () => {
           {isEditing ? "Save" : "Publish"}
         </Button>
         <a href="/">
-          <Button size="large">Отмена</Button>
+          <Button size="large">Cancel</Button>
         </a>
       </div>
     </Paper>

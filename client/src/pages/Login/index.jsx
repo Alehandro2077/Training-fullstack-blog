@@ -48,7 +48,7 @@ export const Login = () => {
   return (
     <Paper classes={{ root: styles.root }}>
       <Typography classes={{ root: styles.title }} variant="h5">
-        Вход в аккаунт
+        Sign up
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
@@ -76,7 +76,7 @@ export const Login = () => {
           variant="contained"
           fullWidth
         >
-          Войти
+          Login
         </Button>
       </form>
     </Paper>
